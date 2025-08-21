@@ -21,9 +21,10 @@ function timeWatch() {
     let week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     let y = month[myTime.getMonth()];
     let w = week[myTime.getDay()];
-    document.getElementsByClassName("date")[0].innerHTML = y +", "+ w +" --- "+myTime.getFullYear();
+    document.getElementsByClassName("date")[0].innerHTML = myTime.getDate() + " " + y +", "+ w + " --- " + myTime.getFullYear();
 }
 timeWatch();
 
 setInterval(timeWatch,1000);
+
 
