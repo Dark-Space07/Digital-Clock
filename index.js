@@ -18,10 +18,11 @@ function timeWatch() {
     document.getElementsByClassName("hour")[0].innerHTML = timing;
 
     let month = ["January","February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    let week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thusday", "Friday"];
+    let week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
     let y = month[myTime.getMonth()];
     let w = week[myTime.getDay()];
     document.getElementsByClassName("date")[0].innerHTML = y +", "+ w +" --- "+myTime.getFullYear();
 }
 timeWatch();
+
 setInterval(timeWatch,1000);
