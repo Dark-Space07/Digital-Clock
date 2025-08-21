@@ -6,7 +6,7 @@ function timeWatch() {
     let m = (hours >= 12)? "PM" : "AM";
 
     if(hours == 0){
-        hours.getHours();
+        hours = 12;
     } else if(hours > 12){
         hours = hours - 12;
     }
@@ -18,7 +18,7 @@ function timeWatch() {
     document.getElementsByClassName("hour")[0].innerHTML = timing;
 
     let month = ["January","February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    let week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+    let week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     let y = month[myTime.getMonth()];
     let w = week[myTime.getDay()];
     document.getElementsByClassName("date")[0].innerHTML = y +", "+ w +" --- "+myTime.getFullYear();
@@ -26,3 +26,4 @@ function timeWatch() {
 timeWatch();
 
 setInterval(timeWatch,1000);
+
